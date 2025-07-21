@@ -221,6 +221,12 @@ To remove the currently configured GitHub user in the command line and add a new
    git config --global user.name
    git config --global user.email
    ```
+5. **If you want to save your key:** Run the following line and then close and restart the terminal.
+   ```bash
+   git config --global credential.helper 'cache --timeout=900'
+   ```
+    Then try 'git push', and enter your username and key. Then try 'git push' again and it should have saved, so the second time it shouldnt ask you for a username and key. Do this at your own risk (like dont do this on public computers) or else others will be able to access your key in the cache.
+   
 
 ---
 # Pipeline for New Contributions
